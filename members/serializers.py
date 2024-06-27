@@ -12,7 +12,7 @@ class MemberSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Member
-        fields = ['name', 'address']
+        fields = ['id', 'name', 'address']
 
     def create(self, validated_data):
         address_validated_data = validated_data.pop('address')
